@@ -255,8 +255,7 @@ public class ProjectMemoryManager extends RecordBatchMemoryManager {
         setOutgoingBatch(outgoingBatch);
         reset();
 
-        RecordBatchStats.logRecordBatchStats(outgoingBatch.getRecordBatchStatsContext(),
-          "configuredOutputSize: %d", getOutputBatchSize());
+        RecordBatchStats.printConfiguredBatchSize(outgoingBatch.getRecordBatchStatsContext(), getOutputBatchSize());
     }
 
     private void reset() {
